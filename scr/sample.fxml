@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="CalculatorMCR" fx:id="CalculatorMCR" focusTraversable="true" prefHeight="409.0" prefWidth="240.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <TextField fx:id="inputNum" alignment="CENTER" layoutX="35.0" layoutY="41.0" onAction="#getInputNum" prefHeight="40.0" prefWidth="170.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField fx:id="outputNum" alignment="CENTER" layoutX="35.0" layoutY="101.0" onAction="#getOutputNum" prefHeight="40.0" prefWidth="170.0" style="-fx-border-color: #808080;">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </TextField>
+   <Label fx:id="labelFreq" layoutX="35.0" layoutY="27.0" text="Частота:" />
+   <Label fx:id="labelRes" layoutX="35.0" layoutY="87.0" text="Результат:" />
+   <TextArea fx:id="info" layoutX="35.0" layoutY="151.0" mouseTransparent="true" prefHeight="54.0" prefWidth="170.0" visible="false" wrapText="true">
+      <font>
+         <Font name="System Italic" size="11.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="NONE" />
+      </cursor>
+   </TextArea>
+   <Group fx:id="groupKeyboard" layoutX="40.0" layoutY="234.0">
+      <children>
+         <Button fx:id="btn1" layoutX="6.0" layoutY="1.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="1" />
+         <Button fx:id="btn2" layoutX="60.0" layoutY="1.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="2" />
+         <Button fx:id="btn3" layoutX="114.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="3" />
+         <Button fx:id="btn4" layoutX="6.0" layoutY="43.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="4" />
+         <Button fx:id="btn5" layoutX="60.0" layoutY="42.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="5" />
+         <Button fx:id="btn6" layoutX="114.0" layoutY="43.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="6" />
+         <Button fx:id="btn7" layoutX="6.0" layoutY="84.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="7" />
+         <Button fx:id="btn8" layoutX="60.0" layoutY="84.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="8" />
+         <Button fx:id="btn9" layoutX="114.0" layoutY="84.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="9" />
+         <Button fx:id="btnDel" layoutX="114.0" layoutY="125.0" mnemonicParsing="false" onAction="#getDellNums" prefHeight="30.0" prefWidth="70.0" text="&lt;--" />
+         <Button fx:id="btn11" layoutX="60.0" layoutY="125.0" mnemonicParsing="false" onAction="#getButtonEvent" prefHeight="30.0" prefWidth="40.0" text="0" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold Italic" size="11.0" />
+            </font>
+         </Button>
+      </children>
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </Group>
+   <RadioButton fx:id="radioKeyboard" layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#getRadioKeyboard" text="вкл/выкл" />
+   <Label fx:id="key" layoutX="90.0" layoutY="213.0" text="Клавиатура" />
+   <ToggleButton fx:id="toggleBackground" layoutX="206.0" layoutY="6.0" mnemonicParsing="false" onAction="#getToggleBackground" style="-fx-background-color: #353839;" text="фон" textAlignment="CENTER" textFill="WHITE">
+      <font>
+         <Font name="System Italic" size="9.0" />
+      </font>
+   </ToggleButton>
+   <CheckBox fx:id="fixButton" layoutX="5.0" layoutY="6.0" mnemonicParsing="false" onAction="#getFix" text="закрепить" />
+</AnchorPane>
