@@ -1,5 +1,5 @@
 # Calculator-MCR
-https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
 <p align=”center”>
   <img width="315" height="600" src="screenshots/1.jpg" alt="telega_alert_bot_admin">
